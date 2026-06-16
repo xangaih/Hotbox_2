@@ -1,0 +1,20 @@
+# API keys — never commit these
+.env
+khangai-key.txt
+
+# Pipeline output — generated files, not source
+pipeline/output.json
+pipeline/output_test.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Node / Vite
+ui/node_modules/
+ui/dist/
+
+# macOS
+.DS_Store

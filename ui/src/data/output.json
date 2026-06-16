@@ -1,0 +1,341 @@
+{
+  "matt.lifts.heavy": {
+    "qualityScore": 91,
+    "summary": "Matt is a 28-year-old Ohio lifter stuck on a 5-month strength plateau who is explicitly asking about 1:1 coaching structure and accountability.",
+    "leadType": "service_inquiry",
+    "buyingIntent": "high",
+    "recommendedAction": "Reply with the $200/mo coaching structure — monthly programming, form checks, weekly check-ins — and ask what his current split looks like.",
+    "scoringReasoning": "Explicit coaching ask in the DM, documented plateau frustration across multiple posts, genuine consistent lifting content with no spam signals. Coaching is Apex Fuel's top priority and Matt fits the ideal customer profile exactly.",
+    "triage": "important",
+    "suggestedReplies": [
+      {
+        "label": "Direct close",
+        "text": "hey matt — 5 months stuck usually means something structural is off, not a motivation issue. my coaching is $200/mo: custom monthly programming, weekly form check videos, and i'm in your corner every day. want me to send the full breakdown?"
+      },
+      {
+        "label": "Empathetic opener",
+        "text": "that plateau feeling is genuinely rough, especially when you've done everything right. what does your current split look like? i have a hunch i know where the issue is."
+      },
+      {
+        "label": "Soft qualifier",
+        "text": "hey! sounds like you're at the point where a coach would actually move the needle for you. i have a couple spots open — what's your training background look like?"
+      }
+    ],
+    "enrichmentInfo": {
+      "nicheAuthentic": true,
+      "nicheEvidence": "Posts squat PRs, meal preps, gym check-ins consistently across all 4 posts",
+      "serviceInquiry": true,
+      "productInquiry": false,
+      "partnershipPitch": false,
+      "painPointExpressed": true,
+      "painPointDetail": "stuck at the same bench and squat for 5 months, nothing moving the needle",
+      "priceAwareness": false,
+      "audienceNicheMatch": false,
+      "followerTier": "nano",
+      "engagementHealthy": true,
+      "dmTone": "genuine",
+      "spamSignals": [],
+      "postContentSummary": "Regular gym content — squat PRs, meal prep, training check-ins, one rest day post",
+      "engagementRate": 6.72,
+      "followerCount": 134,
+      "isVerified": false,
+      "postCount": 4,
+      "hasLinkInBio": false
+    },
+    "fullName": "Matt R.",
+    "dm": "hey so i've been stuck at the same bench and squat for like 5 months now and nothing i try is moving the needle. i've watched probably every youtube video at this point lol. i'm at the place where i think i actually need someone to tell me what i'm doing wrong and hold me accountable. what does your coaching actually look like month to month? like how involved are you with programming and checking form?",
+    "recentPosts": [
+      {
+        "caption": "finally hit 225 on squat after being stuck at 205 for what feels like forever. form probably still looks like garbage but i'll take it.",
+        "imageDescription": "a man in a squat rack at a mid-size gym, barbell loaded with plates, depth at parallel",
+        "likeCount": 9,
+        "commentCount": 2,
+        "postedAt": "4d ago"
+      },
+      {
+        "caption": "sunday morning check in. bench has been at 185 for like 5 months and i genuinely have no idea what i'm doing wrong anymore.",
+        "imageDescription": "a white ceramic mug on a kitchen counter next to a phone showing a fitness tracking app",
+        "likeCount": 6,
+        "commentCount": 3,
+        "postedAt": "2w ago"
+      },
+      {
+        "caption": "took my dog cooper to the park instead of going to the gym and honestly zero regrets. back at it tomorrow",
+        "imageDescription": "a medium sized brown lab mix running through an open grassy park",
+        "likeCount": 11,
+        "commentCount": 1,
+        "postedAt": "5w ago"
+      },
+      {
+        "caption": "meal prep sunday. 4 lbs of ground beef, rice, and frozen broccoli. #mealprep #gains #gymlife",
+        "imageDescription": "four glass food storage containers with rice, ground beef, and broccoli",
+        "likeCount": 4,
+        "commentCount": 0,
+        "postedAt": "2mo ago"
+      }
+    ]
+  },
+  "lifts.with.lena": {
+    "qualityScore": 78,
+    "summary": "Lena is a competitive powerlifter with 61k followers pitching a meet-prep collab series with product gifting and rev share.",
+    "leadType": "partnership",
+    "buyingIntent": "medium",
+    "recommendedAction": "Evaluate her audience alignment first — if engagement holds (it does at ~5.5%), a product gifting + rev share collab during her meet prep series could drive real product sales.",
+    "scoringReasoning": "Genuine fitness creator with strong engagement for her tier, verified, and her audience is exactly Apex Fuel's target. The pitch is professional and specific. Worth a collab conversation, though coaching isn't the angle here.",
+    "triage": "important",
+    "suggestedReplies": [
+      {
+        "label": "Direct close",
+        "text": "hey lena — your numbers look great and meet prep content is exactly the kind of thing our audience responds to. i'm open to product gifting + rev share. can you send me your media kit or rough rate card?"
+      },
+      {
+        "label": "Empathetic opener",
+        "text": "love the meet prep content — the consistency is real. we've done a few collab cycles before and they work best when the creator actually uses the product. what supplements are you currently running?"
+      },
+      {
+        "label": "Soft qualifier",
+        "text": "this could be a good fit timing-wise. what does the rev share structure look like on your end? and how many posts/stories are you thinking for the series?"
+      }
+    ],
+    "enrichmentInfo": {
+      "nicheAuthentic": true,
+      "nicheEvidence": "Every post is lifting-related — meet prep, PRs, training logs. No lifestyle fluff.",
+      "serviceInquiry": false,
+      "productInquiry": false,
+      "partnershipPitch": true,
+      "painPointExpressed": false,
+      "painPointDetail": "",
+      "priceAwareness": true,
+      "audienceNicheMatch": true,
+      "followerTier": "mid",
+      "engagementHealthy": true,
+      "dmTone": "genuine",
+      "spamSignals": [],
+      "postContentSummary": "100% powerlifting content — meet prep vlogs, squat PRs, programming breakdowns",
+      "engagementRate": 5.49,
+      "followerCount": 61800,
+      "isVerified": true,
+      "postCount": 4,
+      "hasLinkInBio": true
+    },
+    "fullName": "Lena Park",
+    "dm": "hi! i'm a competitive powerlifter and i've been following apex fuel for a while now. my page is pretty much all lifting, meet prep vlogs, and programming breakdowns, so my followers are serious about training. i've got a big meet prep series starting next month and i'd love to feature a supplement partner throughout it. open to product gifting plus a rev share structure if that works on your end. would love to chat more if you're looking for collab partners this cycle",
+    "recentPosts": [
+      {
+        "caption": "week 1 of meet prep officially in the books. opener selection is already stressing me out but we move #powerlifting #meetprep",
+        "imageDescription": "a woman in a black singlet setting up for a squat in a home gym, whiteboard with training numbers visible",
+        "likeCount": 2941,
+        "commentCount": 87,
+        "postedAt": "1d ago"
+      },
+      {
+        "caption": "sunday ritual: cold brew, dogs on the couch, and reviewing last week's training log",
+        "imageDescription": "two corgis lying on a gray couch next to a woman holding a large cold brew coffee cup",
+        "likeCount": 3812,
+        "commentCount": 134,
+        "postedAt": "2d ago"
+      },
+      {
+        "caption": "SQUAT PR. 147.5kg at 72kg bw. spite fueled. mid-grind era, do not disturb #squat #PR #powerlifting",
+        "imageDescription": "a woman at the bottom of a heavy squat, bar bending slightly across her back, spotter standing nearby",
+        "likeCount": 4503,
+        "commentCount": 219,
+        "postedAt": "4d ago"
+      },
+      {
+        "caption": "seattle mornings before the gym are the only peace i get lol",
+        "imageDescription": "an early morning view of a quiet Seattle street with soft gray light, a coffee cup in the foreground",
+        "likeCount": 1876,
+        "commentCount": 56,
+        "postedAt": "6d ago"
+      }
+    ]
+  },
+  "sarah_gets_fit_2024": {
+    "qualityScore": 55,
+    "summary": "Sarah is a beginner lifter asking about which protein powder to start with after seeing an Apex Fuel post.",
+    "leadType": "product_inquiry",
+    "buyingIntent": "medium",
+    "recommendedAction": "Recommend the starter protein ($35) and ask about her goals — there's an upsell path to coaching if she's serious.",
+    "scoringReasoning": "Genuine product interest with a specific question. Newer account with low engagement but the DM reads as real curiosity, not spam. Worth a quick reply to close a product sale.",
+    "triage": "needs_reply",
+    "suggestedReplies": [
+      {
+        "label": "Direct close",
+        "text": "hey! our whey protein is $35 and a great starting point — unflavored or chocolate. want me to send you the link? also curious what your goals are, could point you in the right direction."
+      },
+      {
+        "label": "Empathetic opener",
+        "text": "starting out is the hardest part honestly. for protein i'd go with our whey first — $35, nothing fancy, just works. what are you training for?"
+      },
+      {
+        "label": "Soft qualifier",
+        "text": "good timing — we just restocked. what kind of training are you doing? that'll help me point you to the right product."
+      }
+    ],
+    "enrichmentInfo": {
+      "nicheAuthentic": true,
+      "nicheEvidence": "Recent posts show gym check-ins and workout summaries, consistent with a beginner lifter",
+      "serviceInquiry": false,
+      "productInquiry": true,
+      "partnershipPitch": false,
+      "painPointExpressed": false,
+      "painPointDetail": "",
+      "priceAwareness": false,
+      "audienceNicheMatch": false,
+      "followerTier": "nano",
+      "engagementHealthy": false,
+      "dmTone": "genuine",
+      "spamSignals": [],
+      "postContentSummary": "Early-stage gym content — first workouts, basic form videos, motivational captions",
+      "engagementRate": 3.1,
+      "followerCount": 89,
+      "isVerified": false,
+      "postCount": 6,
+      "hasLinkInBio": false
+    },
+    "fullName": "Sarah M.",
+    "dm": "hi! i've been seeing your posts come up a lot and i'm just starting to get into lifting. i don't really know much about supplements yet but my friend said protein powder is a good start. do you sell protein and if so which one would you recommend for someone just starting out?",
+    "recentPosts": [
+      {
+        "caption": "day 3 at the gym this week!! slowly getting used to it",
+        "imageDescription": "a woman taking a selfie in a gym mirror, casual clothes, light dumbbells visible in background",
+        "likeCount": 4,
+        "commentCount": 1,
+        "postedAt": "2d ago"
+      },
+      {
+        "caption": "tried a dumbbell circuit for the first time today. my arms are dead lol",
+        "imageDescription": "a phone screen showing a workout app with completed checkboxes",
+        "likeCount": 3,
+        "commentCount": 2,
+        "postedAt": "1w ago"
+      },
+      {
+        "caption": "gym selfie because why not. still figuring this all out but showing up",
+        "imageDescription": "a woman in workout clothes smiling at the camera in a bright gym",
+        "likeCount": 7,
+        "commentCount": 0,
+        "postedAt": "2w ago"
+      }
+    ]
+  },
+  "grow_your_brand_fast": {
+    "qualityScore": 4,
+    "summary": "Mass-sent spam DM from a social media growth service with no fitness relevance.",
+    "leadType": "spam",
+    "buyingIntent": "low",
+    "recommendedAction": "Ignore. No reply needed.",
+    "scoringReasoning": "Generic compliment followed by a pitch for follower growth services. No fitness content on the account, templated DM structure, and 'love your page' opener is a textbook spam signal. Zero fit with Apex Fuel.",
+    "triage": "all_others",
+    "suggestedReplies": [],
+    "enrichmentInfo": {
+      "nicheAuthentic": false,
+      "nicheEvidence": "No fitness content whatsoever — account posts generic business tips and growth hacks",
+      "serviceInquiry": false,
+      "productInquiry": false,
+      "partnershipPitch": false,
+      "painPointExpressed": false,
+      "painPointDetail": "",
+      "priceAwareness": false,
+      "audienceNicheMatch": false,
+      "followerTier": "micro",
+      "engagementHealthy": false,
+      "dmTone": "templated",
+      "spamSignals": ["generic compliment opener", "growth services pitch", "no fitness relevance", "mass-send format"],
+      "postContentSummary": "Business/marketing content — follower growth tips, engagement pods, DM scripts",
+      "engagementRate": 0.4,
+      "followerCount": 3200,
+      "isVerified": false,
+      "postCount": 12,
+      "hasLinkInBio": true
+    },
+    "fullName": "Brand Growth Co.",
+    "dm": "omg love your page!! your content is so inspiring 🙌 i help fitness influencers like you grow their following 10x in 30 days using our proven engagement system. we've helped 500+ creators blow up their accounts. would love to hop on a quick call and show you how it works! link in bio 🔥",
+    "recentPosts": [
+      {
+        "caption": "10 ways to grow your instagram in 2024 💯 #growthhacks #socialmediatips",
+        "imageDescription": "a generic graphic with bold text '10X YOUR FOLLOWERS' on a bright yellow background",
+        "likeCount": 12,
+        "commentCount": 1,
+        "postedAt": "3d ago"
+      },
+      {
+        "caption": "engagement pod strategy that actually works 👀 dm me for details",
+        "imageDescription": "a screenshot of an Instagram analytics dashboard showing follower growth",
+        "likeCount": 8,
+        "commentCount": 3,
+        "postedAt": "1w ago"
+      }
+    ]
+  },
+  "dan.the.desk.jockey": {
+    "qualityScore": 62,
+    "summary": "Dan is a 35-year-old office worker who's been lifting casually for a year and is asking about pre-workout recommendations after losing energy mid-session.",
+    "leadType": "product_inquiry",
+    "buyingIntent": "medium",
+    "recommendedAction": "Recommend the pre-workout ($45) and explain the non-crash formula — his energy problem is exactly what it solves. Mention coaching as a follow-up if he wants to optimize more.",
+    "scoringReasoning": "Real product inquiry with a specific use case. Account shows genuine lifting content even if sparse. The energy/fatigue angle is a direct fit for the pre-workout product. Mid-tier lead worth a prompt reply.",
+    "triage": "needs_reply",
+    "suggestedReplies": [
+      {
+        "label": "Direct close",
+        "text": "hey dan — that mid-session crash is exactly what our pre-workout is built for. it's $45 and uses a non-crash formula so you don't die at hour 2. want me to send the link?"
+      },
+      {
+        "label": "Empathetic opener",
+        "text": "desk job + gym is genuinely a hard combo — by the time you get there your tank is empty. what time are you usually training? that might affect what i recommend."
+      },
+      {
+        "label": "Soft qualifier",
+        "text": "good question — a few things could cause that. are you training after work or in the morning? and have you tried pre-workout before or would this be your first?"
+      }
+    ],
+    "enrichmentInfo": {
+      "nicheAuthentic": true,
+      "nicheEvidence": "Posts gym check-ins and form videos, lifestyle is consistent with a casual gym-goer",
+      "serviceInquiry": false,
+      "productInquiry": true,
+      "partnershipPitch": false,
+      "painPointExpressed": true,
+      "painPointDetail": "energy drops off hard about halfway through workouts, especially after work",
+      "priceAwareness": false,
+      "audienceNicheMatch": false,
+      "followerTier": "nano",
+      "engagementHealthy": true,
+      "dmTone": "genuine",
+      "spamSignals": [],
+      "postContentSummary": "Casual lifting content — gym check-ins, occasional form videos, some work-from-home life content",
+      "engagementRate": 5.8,
+      "followerCount": 212,
+      "isVerified": false,
+      "postCount": 8,
+      "hasLinkInBio": false
+    },
+    "fullName": "Dan K.",
+    "dm": "hey, been lifting for about a year now and lately i've been running out of steam like halfway through my workouts. someone mentioned pre-workout but i've never tried it before and there are like a million options. do you have one you'd recommend that isn't going to make my heart explode lol",
+    "recentPosts": [
+      {
+        "caption": "post-work gym session. tired but here. #consistency",
+        "imageDescription": "a man in business casual clothes carrying a gym bag through a parking garage",
+        "likeCount": 7,
+        "commentCount": 2,
+        "postedAt": "5d ago"
+      },
+      {
+        "caption": "finally got my squat form checked on video. it's bad. but now i know lol",
+        "imageDescription": "a phone propped up against a barbell showing a slow-motion squat video",
+        "likeCount": 11,
+        "commentCount": 4,
+        "postedAt": "2w ago"
+      },
+      {
+        "caption": "home office view today. gym after. this is my life now apparently",
+        "imageDescription": "a desk setup with two monitors, a coffee mug, and a window with overcast light",
+        "likeCount": 5,
+        "commentCount": 0,
+        "postedAt": "3w ago"
+      }
+    ]
+  }
+}
