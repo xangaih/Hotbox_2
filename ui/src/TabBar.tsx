@@ -12,6 +12,7 @@ const TABS: { id: TriageTab; label: string }[] = [
   { id: 'all_others', label: 'All Others' },
   { id: 'starred', label: 'Starred' },
   { id: 'done', label: 'Done' },
+  { id: 'cold_leads', label: 'Cold Leads' },
 ];
 
 export default function TabBar({ activeTab, onTabChange, counts }: TabBarProps) {

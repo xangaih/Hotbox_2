@@ -11,6 +11,7 @@ load_dotenv()
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -21,19 +22,38 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-PIPELINE_DIR = Path(__file__).parent
-OUTPUT_PATH  = PIPELINE_DIR / "output.json"
+PIPELINE_DIR    = Path(__file__).parent
+OUTPUT_PATH     = PIPELINE_DIR / "output.json"
+PROSPECTED_PATH = PIPELINE_DIR.parent / "prospected_leads.json"
+PROSPECTOR_DIR  = PIPELINE_DIR.parent / "prospector"
 
 # Track pipeline run state
 pipeline_state: dict = {"running": False, "progress": "", "done": 0, "total": 0}
 
+# Track prospector run state
+prospector_state: dict = {"running": False, "progress": "", "username": ""}
+
+
+class ProspectRequest(BaseModel):
+    username: str
+
 
 @app.get("/leads")
 def get_leads():
-    if not OUTPUT_PATH.exists():
-        return {}
-    with open(OUTPUT_PATH) as f:
-        return json.load(f)
+    result = {}
+    # Pipeline output (scored leads)
+    if OUTPUT_PATH.exists():
+        try:
+            result.update(json.load(open(OUTPUT_PATH)))
+        except Exception:
+            pass
+    # Prospected cold leads (separate file)
+    if PROSPECTED_PATH.exists():
+        try:
+            result.update(json.load(open(PROSPECTED_PATH)))
+        except Exception:
+            pass
+    return result
 
 
 @app.get("/status")
@@ -94,3 +114,45 @@ def run_pipeline():
 
     threading.Thread(target=_run, daemon=True).start()
     return {"status": "started"}
+
+
+@app.get("/prospect/status")
+def get_prospect_status():
+    return prospector_state
+
+
+@app.post("/prospect")
+def run_prospect(payload: ProspectRequest):
+    username = payload.username.strip().lstrip("@")
+    if not username:
+        raise HTTPException(status_code=400, detail="username is required")
+    if prospector_state["running"]:
+        raise HTTPException(status_code=409, detail="Prospector is already running")
+
+    def _run():
+        prospector_state["running"]  = True
+        prospector_state["progress"] = f"Prospecting @{username}..."
+        prospector_state["username"] = username
+
+        proc = subprocess.Popen(
+            [sys.executable, "-u", "prospector.py", "--username", username],
+            cwd=str(PROSPECTOR_DIR),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            env={**os.environ},
+        )
+
+        for line in proc.stdout:
+            line = line.rstrip()
+            print(line)
+            prospector_state["progress"] = line
+
+        proc.wait()
+        prospector_state["running"]  = False
+        prospector_state["progress"] = (
+            "Done" if proc.returncode == 0 else f"Error (exit {proc.returncode})"
+        )
+
+    threading.Thread(target=_run, daemon=True).start()
+    return {"status": "started", "username": username}

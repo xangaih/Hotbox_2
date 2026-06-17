@@ -32,6 +32,12 @@ export default function App() {
   const [pipelineDone, setPipelineDone] = useState(0);
   const [pipelineTotal, setPipelineTotal] = useState(0);
 
+  // Prospect state — mirrors pipeline state pattern exactly
+  const [prospectStatus, setProspectStatus]     = useState<'idle'|'running'|'done'|'error'>('idle');
+  const [prospectProgress, setProspectProgress] = useState('');
+  const [prospectUsername, setProspectUsername] = useState('');
+  const [showProspectInput, setShowProspectInput] = useState(false);
+
   const [triageOverrides, setTriageOverrides] = useState<Record<string, TriageTab>>(
     () => {
       try {
@@ -84,6 +90,26 @@ export default function App() {
     return () => clearInterval(interval);
   }, [pipelineStatus, fetchLeads]);
 
+  useEffect(() => {
+    if (prospectStatus !== 'running') return;
+    const interval = setInterval(async () => {
+      try {
+        const res = await fetch(`${API}/prospect/status`);
+        const s = await res.json();
+        setProspectProgress(s.progress);
+        if (!s.running) {
+          setProspectStatus(s.progress.startsWith('Error') ? 'error' : 'done');
+          clearInterval(interval);
+          fetchLeads();
+        }
+      } catch {
+        setProspectStatus('error');
+        clearInterval(interval);
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [prospectStatus, fetchLeads]);
+
   async function runPipeline() {
     setPipelineStatus('running');
     setPipelineProgress('Starting...');
@@ -99,6 +125,28 @@ export default function App() {
     } catch {
       setPipelineProgress('Cannot reach server');
       setPipelineStatus('error');
+    }
+  }
+
+  async function runProspect() {
+    if (!prospectUsername.trim()) return;
+    setProspectStatus('running');
+    setProspectProgress('Starting...');
+    setShowProspectInput(false);
+    try {
+      const res = await fetch(`${API}/prospect`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: prospectUsername.trim() }),
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        setProspectProgress(err.detail ?? 'Error starting prospector');
+        setProspectStatus('error');
+      }
+    } catch {
+      setProspectProgress('Cannot reach server');
+      setProspectStatus('error');
     }
   }
 
@@ -119,6 +167,7 @@ export default function App() {
     all_others:  leads.filter(l => l.triage === 'all_others').length,
     starred:     leads.filter(l => l.triage === 'starred').length,
     done:        leads.filter(l => l.triage === 'done').length,
+    cold_leads:  leads.filter(l => l.triage === 'cold_leads').length,
   };
 
   const progressPct = pipelineTotal > 0 ? Math.round((pipelineDone / pipelineTotal) * 100) : 0;
@@ -158,6 +207,64 @@ export default function App() {
           {pipelineStatus === 'error' && (
             <span className="text-xs text-red-500">{pipelineProgress}</span>
           )}
+
+          {/* Prospect input — appears when button is clicked */}
+          {showProspectInput && (
+            <div className="flex items-center gap-2">
+              <input
+                type="text"
+                placeholder="instagram username"
+                value={prospectUsername}
+                onChange={e => setProspectUsername(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && runProspect()}
+                autoFocus
+                className="text-xs px-3 py-1.5 border border-gray-300 rounded-full outline-none focus:border-gray-500 w-44"
+              />
+              <button
+                onClick={runProspect}
+                disabled={!prospectUsername.trim()}
+                className="text-xs px-3 py-1.5 rounded-full font-medium bg-gray-900 text-white hover:bg-gray-700 disabled:opacity-40"
+              >
+                Go
+              </button>
+              <button
+                onClick={() => setShowProspectInput(false)}
+                className="text-xs text-gray-400 hover:text-gray-600"
+              >
+                ✕
+              </button>
+            </div>
+          )}
+
+          {/* Prospect status display */}
+          {prospectStatus === 'running' && (
+            <span className="text-xs text-blue-600 font-medium animate-pulse">
+              {prospectProgress || 'Prospecting...'}
+            </span>
+          )}
+          {prospectStatus === 'done' && (
+            <span className="text-xs text-green-600 font-medium">Prospect complete</span>
+          )}
+          {prospectStatus === 'error' && (
+            <span className="text-xs text-red-500">{prospectProgress}</span>
+          )}
+
+          {/* Prospect button */}
+          <button
+            onClick={() => {
+              setShowProspectInput(v => !v);
+              setProspectStatus('idle');
+              setProspectUsername('');
+            }}
+            disabled={prospectStatus === 'running'}
+            className={`text-xs px-4 py-1.5 rounded-full font-medium border transition-colors ${
+              prospectStatus === 'running'
+                ? 'border-gray-200 text-gray-400 cursor-not-allowed'
+                : 'border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900'
+            }`}
+          >
+            {prospectStatus === 'running' ? 'Prospecting...' : '🔍 Prospect'}
+          </button>
 
           {/* Refresh button */}
           <button

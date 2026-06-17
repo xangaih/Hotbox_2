@@ -18,7 +18,8 @@ export type TriageTab =
   | 'needs_reply'
   | 'all_others'
   | 'starred'
-  | 'done';
+  | 'done'
+  | 'cold_leads';
 
 export type SortMode = 'priority' | 'recent';
 
@@ -76,6 +77,11 @@ export interface Lead {
   fullName: string;
   dm: string;
   recentPosts: RecentPost[];
+
+  // Optional — only present on prospected cold leads
+  isProspected?: boolean;
+  dataSource?: string[];
+  dataConfidence?: 'high' | 'medium' | 'low' | 'none';
 }
 
 export interface RecentPost {
